@@ -1,0 +1,20 @@
+public class q1 {
+
+// Find the maximum of the array:
+    public static void main(String[] args) {
+        int []a={5,4,7,6,7,0};// array taken from user
+        int max=a[0];// we take a[0] to compare with others// for maximum
+        for(int i = 1;i< a.length;i++)//for loop for checking of each element
+        {
+                if(max < a[i]){//comparing max with each element
+                max = a[i];//if max is smaller than element than we swap that max with a[i]
+            }
+               
+        }            System.out.println("max is "+max);//printing the max
+
+
+
+
+    
+    }
+}
