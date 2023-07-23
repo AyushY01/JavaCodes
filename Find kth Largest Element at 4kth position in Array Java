@@ -1,0 +1,27 @@
+public class q4 {
+
+    // Find kth Largest Element at 4kth position in Array Java
+    //same logic as finding largest element ih the array
+    public static void main(String[] args) {
+        int arr[] = { 5, 8, 12, 6, 7, 3 };
+        int temp;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+
+                }
+
+            }
+
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("" + arr[i]);
+        }
+        int kth = arr[3];
+
+        System.out.println("Element at kth position is " + kth);
+    }
+}
