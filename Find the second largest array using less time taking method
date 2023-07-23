@@ -1,0 +1,22 @@
+public class q3Secondpart {
+    // Find the second largest array using less time taking method:
+    public static void main(String[] args) {
+        int arr[] = { 5, 3, 0, 8, 2, 1 };// array initialisation
+        int largest = Integer.MIN_VALUE;// storing the last poosible negative of int.
+        int secondlargest = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) { // for loop for trasversing the array
+            if (arr[i] > largest) { // if is used to compare the with largest because in int no value will be
+                                    // smaller than value stored in largest
+                secondlargest = largest;// now putting the largest value in second largest i.e min.value
+                largest = arr[i];// putting the arr[i]value into largest
+            } else if (arr[i] > secondlargest && arr[i] != largest) { // using else if for the secondlargest int value
+                secondlargest = arr[i];
+
+            }
+
+        }
+        System.out.println("" + secondlargest);
+
+    }
+}
